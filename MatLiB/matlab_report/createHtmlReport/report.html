@@ -1,0 +1,26 @@
+<html>
+<title>
+M-files Report for folder ../
+</title>
+<hr><font size = "5">M-files Report for folder "../"</font>
+<hr><body>
+<font face="verdana" size = "3">
+<p><b> General Information:
+<table border="1">
+<tr><td bgcolor="99aaff">Total Number of m-files:</td><td bgcolor="99aaff">1</td>
+<tr><td bgcolor="ffbb99">Total Size of m-files:</td><td bgcolor="ffbb99">17.51 KBs</td>
+</table>
+<p><b>File List:
+<table border="1">
+<tr><td bgcolor="aaccee"><b>No</td><td bgcolor="eeddaa"><b>Filename</td><td bgcolor="bbeecc"><b>Description</td><td bgcolor="8899aa"><b>Size (KBs)</td></tr>
+<tr>
+<td bgcolor="bbddff">1</td><td  bgcolor="ffeebb">print2html.m</td>
+<td  bgcolor="ccffdd">  PRINT2HTML - Write data in a structured way using html-code<br>     print2html(d[,nrecurs[,f[,options]]])<br>         d - data<br>         nrecurs - maximum level of recursive writing<br>             if not given or empty : 1<br>         f - filename, file-handle for result<br>             1 : screen<br>             if a filename is given a general html begin and end is added.<br>             'web' or not given : data is sent to Matlab-webviewer<br>     HTMLout=print2html(d[,nrecurs[,options]])<br> <br>     arrays are printed if they are small, otherwise they are summarized in one line.<br>     The definition of "small" can be changed by giving options.<br> <br>     OPTIONS<br>     -------<br> <br>     options can be given as a 2d-cell-array, a 1d-cell-array or a struct :<br>        1d :<br>            {'option1'[,<value for option1 if necessary>],...}<br>        struct :<br>            struct('option1',<value for option1>,....);<br>        2d :<br>            {'option1',<value for option1>;<br>             'option2.....}<br>            (!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!)<br>               this possibility can only be used if more then one option is used<br>               otherwise confusion with 1d-list is possible<br>      Additionally a string value may be used if one option without value is given.<br> <br>     The following options are possible (in any combination and order).<br> <br>         'maxcolarr' (def. 4) : maximum columns to display full array (numeric arrays)<br>         'maxrowarr' (def.10) : maximum rows to display full array<br>                (this limitation is also used in char-arrays)<br>         'maxel'     (def.20) : maximum total number of values to display 1D-list of values<br>         'forcehead'          : print head and end of HTML-page<br>                 In 1d-option-lists no value had to be given, otherwise<br>                        values 0 or 1(~=0) can be given or 'on' or 'off'<br>                 for 1d-option-lists values 0 or 1 are allowed (no char-value<br>                        because then this value is interpreted as a new option)<br> <br>         'numForm'  : the way numbers are displayed (input to fprintf)<br>                  default %g : "normal display" (see fprintf-documentation for more details)<br>                  (!)Every value displayed is using this format.<br>         'emptyArray' : this gives what has to be displayed for an empty array (default '[]')<br>         'emptyCell'  : this gives what has to be displayed for an empty cell (default '{}')<br>         'maxcolcell' (def. 0) : maximum columns to display full cell<br>         'maxrowcell' (def. 0) : maximum rows to display full cell<br>         'title' : title of html-page (default Matlab-data display)<br>       .................................<br>       Other options (related to the display of data) are possible but these are too<br>          long to list here.  Look to the comments further in the code to find a more<br>          complete list.
+</td>
+<td  bgcolor="99aabb">
+17.5</td>
+</tr>
+</table>
+</font>
+</body>
+</html>

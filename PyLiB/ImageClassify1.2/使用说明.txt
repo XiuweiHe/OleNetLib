@@ -1,0 +1,11 @@
+版本号1.02
+
+src: 表示待处理图片所在文件夹路径
+
+ext：表示待处理图片的类型，如：bmp , jpg 等
+
+mode:表示对图片进行分类的方式，copy为复制分类，cut为剪切分类
+
+给src, ext, mode赋值以后，双击imageClassification.exe运行程序
+
+在给出的文件路径上不能出现"xyy"字符串
