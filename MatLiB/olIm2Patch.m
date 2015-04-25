@@ -1,21 +1,22 @@
-function patchs = olIm2Patch(img, sz, stride)
+function patchCell = olIm2Patch(img, sz, stride)
 
 %%
 blk_size = sz;
 [M, N, K] = size(img);
-patch_num = floor((M - blk_size(1)/2 )/stride) * floor((N - blk_size(2)/2 ) / stride);
-patchs = zeros(sz(1), sz(2), size(img, 3), patch_num, 'single');
+patch_num = floor((M - blk_size(1))/stride + 1) * floor((N - blk_size(2)) / stride +1);
+patchCell = cell(patch_num, 1);
 
-ind = 1;
-for r = blk_size(1)/2+1 : stride : M - blk_size(1)/2 
-    for c = blk_size(2)/2+1 : stride : N -blk_size(2)/2
+count = 1;
+for r = 1 : stride : M
+    for c = 1 : stride : N
         blk = img(...
-            r-blk_size(1)/2 : r+blk_size(1)/2-1,...
-            c-blk_size(2)/2 : c+blk_size(2)/2-1, ...
+            r : r+blk_size(1)-1,...
+            c : c+blk_size(2)-1, ...
             :);
-        patchs(:,:,:,ind) = blk;
-        ind = ind + 1;
+        patchCell{count,1} = blk;
+        count = count + 1;
     end
 end
 
+% patchArray = cat(4, patchCell{:});
 end

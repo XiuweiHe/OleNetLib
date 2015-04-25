@@ -11,7 +11,7 @@ ext = p.Results.ext;
 dirData = dir(dirName);
 dirIndex = [dirData.isdir];
 
-fileList = filterFile({dirData(~dirIndex).name}', ext);
+fileList = olFilterFile({dirData(~dirIndex).name}', ext);
 
 if ~isempty(fileList)
     fileList = cellfun(@(x) ([dirName '/' x]),...
@@ -23,5 +23,5 @@ validIndex = ~ismember(subDirs,{'.','..'});% TO IGNORE '.' or '..'
 for iDir = find(validIndex)
     nextDir = fullfile(dirName,subDirs{iDir});
 	fprintf('Parsing %s\n',nextDir);
-    fileList = [fileList; getfile(nextDir, 'ext', ext)];
+    fileList = [fileList; olGetAllFile(nextDir, 'ext', ext)];
 end
