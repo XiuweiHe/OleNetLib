@@ -1,4 +1,4 @@
-function olCrop(img, dstDir, dstName)
+function olCropGui(img, dstDir, dstName)
 
 %%
 if ~exist(dstDir)
